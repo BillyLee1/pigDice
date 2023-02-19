@@ -2,6 +2,9 @@ body {
   background-color: gray;
 }
 
-.hidden {
+.hiddenCpu {
+  display: none;
+}
+.hiddenHuman {
   display: none;
 }

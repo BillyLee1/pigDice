@@ -12,10 +12,10 @@ let computer = new Player(0, 0, 2);
 
 function isWinner() {
   if (player1.totalScore >= 100) {
-    console.log("Yay HUMAN WINS!");
+    playerWinner();
   }
   if (computer.totalScore >= 100) {
-    console.log("YAY CPU WINS!");
+    cpuWinner();
   }
 }
 
@@ -23,6 +23,7 @@ function gameFunction() {
   gameLogic(dice());
   displayDiceRoll();
   holdFunction();
+  isWinner();
 }
 
 //Human 
@@ -58,6 +59,7 @@ function cpuLogic() {
     
   }
   computer.totalScore += computer.currentScore;
+  computer.currentScore = 0;
   isWinner();
   displayComputerScore()
 }
@@ -99,13 +101,15 @@ document.addEventListener("DOMContentLoaded", function() {
   const roll = document.getElementById("rollDice");
   roll.addEventListener("click", gameFunction);
 });
-
+ 
 function cpuWinner() {
-  let hidden = document.querySelector("#cpu");
-  hidden.removeAttribute("class")
+  let hidden = document.querySelector(".hiddenCpu").removeAttribute("class");
 }
 
 function playerWinner() {
-  let hidden = document.querySelector("#cpu");
-  hidden.removeAttribute("class")
+  let hidden = document.querySelector(".hiddenHuman").removeAttribute("class");
+}
+
+function resetGame() {
+  
 }
