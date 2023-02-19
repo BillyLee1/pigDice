@@ -26,6 +26,7 @@ body {
 
 button {
   width: 100px;
+  background-color: rgb(228, 134, 238);
 }
 .hiddenCpu {
   display: none;
