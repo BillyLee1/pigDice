@@ -9,12 +9,9 @@
 </head>
 <body>
   <div class="contentWrapper">
+    <img src="css/img/pigDice.jpg" alt="Picture of pig dice">
     <div class="title">
       <h1>Pig Dice Game!!!!!!!!!!</h1>
-    </div>
-    <div class="winner">
-      <h2 id="humanWins" class="hiddenHuman">HUMAN WINS!</h2>
-      <h2 id="cpuWins" class="hiddenCpu">COMPUTER WINS!</h2>
     </div>
     <div class="scoreTitle">
       <h3 id="human">Human: 0</h3>
@@ -22,13 +19,16 @@
     </div>
     <div class="dice">
       <button id="rollDice">Roll the dice!</button>
-      <button id="hold" onclick="holdFunction();">Hold!1!!!</button>
-      <button id="reset">Reset!</button>
-      <h4 id="diceValue">Your dice roll: </h4>
+      <button id="hold">Hold</button>
+      <button id="reset">Reset</button>
       
     </div>
+    <h2 id="diceValue">Your dice roll: </h2>
+    <div class="winner">
+      <h2 id="humanWins" class="hiddenHuman">HUMAN WINS!</h2>
+      <h2 id="cpuWins" class="hiddenCpu">COMPUTER WINS!</h2>
+    </div>
   </div>
-
   <script src="js/scripts.js"></script>
 </body>
 </html>

@@ -1,10 +1,39 @@
 body {
-  background-color: gray;
+  background-color: rgb(234, 176, 241);
+  display:flex;
+  flex-direction: column;
+  width: 50%;
+  margin: auto;
 }
 
+.contentWrapper {
+  justify-content: center;
+  margin: auto;
+  border: 1px solid black;
+  padding: 70px;
+  margin-top: 10px;
+}
+
+.scoreTitle {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.dice {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+button {
+  width: 100px;
+}
 .hiddenCpu {
   display: none;
 }
 .hiddenHuman {
   display: none;
+}
+
+img {
+  width: 300px;
 }
