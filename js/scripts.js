@@ -110,6 +110,9 @@ function playerWinner() {
   let hidden = document.querySelector(".hiddenHuman").removeAttribute("class");
 }
 
-function resetGame() {
-  
-}
+document.addEventListener("DOMContentLoaded", function() {
+  const reset = document.getElementById("reset");
+  reset.addEventListener("click", function() {
+    location.reload();
+  });
+});
