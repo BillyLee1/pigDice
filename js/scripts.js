@@ -1,6 +1,3 @@
-// Define a Player class
-var holdVal = false;
-
 function Player(totalScore, currentScore, diceRoll) {
   this.totalScore = totalScore;
   this.currentScore = currentScore;
@@ -20,10 +17,13 @@ function isWinner() {
 }
 
 function gameFunction() {
+  if (player1.totalScore >= 100 || computer.totalScore >= 100) {
+    window.alert("Press restart to play again");
+  } else {
   gameLogic(dice());
   displayDiceRoll();
   holdFunction();
-  isWinner();
+  }
 }
 
 //Human 
@@ -51,6 +51,7 @@ function cpuDice() {
 
 function cpuLogic() {
   player1.totalScore += player1.currentScore;
+  isWinner();
   player1.currentScore = 0;
   displayHumanScore();
   let turn = 2;
